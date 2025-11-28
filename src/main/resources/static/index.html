@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập về nhà</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <div class="sidebar">
+        <div class="sidebar-header">Thi trắc nghiệm</div>
+        <button class="nav-btn active">Bài tập về nhà</button>
+        <button class="nav-btn">Đề thi thử</button>
+      </div>
+
+      <div class="main-content-wrapper">
+        <div class="container">
+          <div id="quiz-content" class="hidden">
+            <div id="quiz-header">
+              <p>Tổng số câu hỏi: <span id="question-count">0</span></p>
+            </div>
+
+            <form id="quiz-form">
+              <div id="questions-container">
+                <p>Đang tải câu hỏi...</p>
+              </div>
+            </form>
+          </div>
+
+          <div id="results" class="hidden">
+            <h2>Kết Quả Chi Tiết</h2>
+            <p>
+              Điểm: <span id="score-display">0</span> /
+              <span id="total-display">0</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-panel">
+        <button id="submit-btn-top" disabled>Nộp bài</button>
+        <button id="retry-btn-top" class="hidden">Làm lại</button>
+        <button id="start-quiz-btn" class="action-btn">Bắt đầu làm bài</button>
+        <button id="random-quiz" class="random-quiz">Xáo trộn câu hỏi</button>
+      </div>
+    </div>
+
+    <!-- ==================== MODAL KẾT QUẢ ==================== -->
+    <div id="result-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Kết quả bài thi</h2>
+          <span class="close-btn">×</span>
+        </div>
+        <div class="modal-body">
+          <div class="score-circle">
+            <span id="modal-score">0</span>
+            <small>/ <span id="modal-total">0</span></small>
+          </div>
+          <p id="score-message" class="score-message">Chúc mừng bạn!</p>
+        </div>
+        <div class="modal-footer">
+          <button id="view-detail-btn">Xem chi tiết đáp án</button>
+          <button id="retry-modal-btn">Làm lại</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
